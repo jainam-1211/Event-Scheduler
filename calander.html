@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<style>
+    body {
+        font-family: 'Lato', sans-serif;
+        margin: 0%;
+    }
+    .navbar {
+        
+        overflow: hidden;
+        background: #5575dd;
+        height: 60px;
+    }
+    .navbar a {
+        /* float: left; */
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 17px;
+        padding: 20px 20px;
+        text-decoration: none;
+    }
+    .navbar a:hover {
+        font-weight: bolder;
+    }
+    .navbar .icon {
+        display: none;
+    }
+    
+    .dropdown {
+        float: right;
+        overflow: hidden;
+        /* margin: 0px; */
+        font-size: 20px;
+    }
+    .dropdown .drop {
+        font-size: 17px; 
+        border: none;
+        outline: none;
+        color: #fff;
+        padding: 20px 20px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    .drop .fa-angle-double-up,
+    .drop:hover .fa-angle-double-down {
+        display: none;
+    }
+    .drop:hover .fa-angle-double-up {
+        display: inline;
+    }
+    .drop-content {
+        display: none;
+        position: absolute;
+        background-color: #5575dd;
+        min-width: 150px;
+        z-index: 1;
+    }
+    .drop-content a {
+        float: none;
+        color: #fff;
+        padding: 12px, 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown:hover .drop-content {
+        display: block;
+    }
+    .drop-content a:hover {
+        background-color: rgba(179, 167, 167, 0.5);
+    }
+    @media screen and (max-width: 768px) {
+        .navbar a {
+            display: none;
+        }
+        .navbar a.icon {
+            float: right;
+            display: block;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .navbar.responsive {
+            position: relative;
+        }
+        .navbar.responsive a.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .navbar.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            padding-left: 20px;
+            border-top: 1px solid #fff;
+    
+        }
+        .navbar.responsive .dropdown {
+            float: none;
+        }
+        .navbar.responsive .drop-content {
+            position: relative;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: rgba(179, 167, 167, 0.5);
+        }
+        .navbar.responsive .drop-content a {
+            border-top: 1px solid #fff;
+        }
+        .navbar.responsive .dropdown .drop {
+            display: block;
+            width: 100%;
+            text-align: left;
+            border-top: 1px solid #fff;
+        }
+        .navbar.responsive .dropdown .drop:hover {
+            background-color: rgba(179, 167, 167, 0.5);
+        }
+        
+    }
+    .form-inline{
+        float: right;
+        margin: 14px;
+    }
+    .form-control{
+        font-size: 20px;
+    }
+    .btn {
+        font-size: 20px;
+    }
+    
+    body {
+        font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #213150;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        /* display: block; */
+    }
+    
+    .sidenav.show {
+        width: 20%;
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+    
+    .sidenav a:hover, .offcanvas a:focus{
+        color: #f1f1f1;
+    }
+    
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px !important;
+        margin-left: 50px;
+    }
+    
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    /* Sidebar */
+    .container {
+        display: inline-block;
+        cursor: pointer;
+        padding-top: 1px;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 4px 0;
+        transition: .9s;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+    /* sidebar ends */
+    
+    .calendar{
+        margin-top: 30px;
+        margin-left: 300px;
+        /* float: center; */
+    }
+</style>
+<body>
+  <div class="navbar" id= "nav" space-between>
+    <div class="dropdown">
+        <a class="drop" href="#Home">Profile 
+          <i class="fa fa-angle-double-down"></i>
+          <i class="fa fa-angle-double-up"></i>
+        </a>
+      <div class="drop-content">
+        <a href="#Prod1">Settings</a>
+        <a href="#Prod2">Prod 2</a>
+        <a href="#Prod3">Prod 3</a>
+      </div>
+    </div>
+  
+    <a href="javascript:void(0);" class="icon" onclick="displayMenu()"><i class="fa fa-bars"></i></a>
+  
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <!-- <a href=""><img class="hello" src="download.png" alt=""></a> -->
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <!-- sidebar -->
+    <div id="mySidenav" class="sidenav" style="justify-content:center">
+
+      <a href="#" >Calendar</a>
+      <a href="#">Roles</a>
+      <a href="#">Events</a>
+      <a href="#">Voice Assistant</a>
+    </div>
+    
+    <div id="main">
+      <span style="cursor:pointer" onclick="toggleNav();">
+    <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    </span>
+    </div>
+    <!-- sidebar ends -->
+  </nav>
+</div>
+
+<!-- calendar -->
+<div class="calendar" >
+  <iframe src="https://calendar.google.com/calendar/embed?src=nisarjainam15%40gmail.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" width="75%" height="100%"></iframe></div>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script>
+    function displayMenu() {
+	var x = document.getElementById("nav");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
+}
+  </script>
+  <script>
+    
+function toggleNav() {
+	var sidenav = document.getElementById("mySidenav"),
+    main = document.getElementById("main");
+    sidenav.style.width = sidenav.style.width == "250px" ? '0' : '250px';
+    main.style.marginLeft = main.style.marginLeft === "250px" ? '0' : '250px';
+}
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+  </script>
+</body>
+</html>
